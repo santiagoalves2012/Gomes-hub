@@ -1,0 +1,1 @@
+# NovaPanel agent — gerido pelo painel.
