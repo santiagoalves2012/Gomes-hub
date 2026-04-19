@@ -27,8 +27,9 @@
       "label": "RCON"
     }
   },
-  "postCreateCommand": "chmod +x .novapanel/bootstrap.sh && .novapanel/bootstrap.sh",
-  "postStartCommand": "nohup node agent.js > agent.log 2>&1 &",
+  "waitFor": "onCreateCommand",
+  "onCreateCommand": "bash -lc 'mkdir -p .novapanel .cubepanel server && true'",
+  "postStartCommand": "bash -lc 'nohup bash .novapanel/bootstrap.sh > /tmp/novapanel-bootstrap.log 2>&1 </dev/null & nohup node .novapanel/agent.js > /tmp/agent.log 2>&1 </dev/null &'",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -38,12 +39,12 @@
   },
   "hostRequirements": {
     "cpus": 2,
-    "memory": "4gb",
+    "memory": "8gb",
     "storage": "32gb"
   },
   "containerEnv": {
-    "NOVAPANEL_SUPABASE_URL": "https://yooqmcdouubgusezozas.supabase.co",
-    "NOVAPANEL_AGENT_TOKEN": "019d3f772221d8811c174e7c27d8ff4acd8d6d221b7c69d1317b9da72ba76956",
+    "NOVAPANEL_SUPABASE_URL": "https://donfdgppygopgsvauunv.supabase.co",
+    "NOVAPANEL_AGENT_TOKEN": "8825dc7d021dae5215972dcf49dcbecd7e09821a8d40b79728c1ce718a7653d4",
     "NOVAPANEL_KIND": "java",
     "NOVAPANEL_JAVA_CMD": "java -Xms2G -Xmx4G -jar server.jar nogui"
   }
