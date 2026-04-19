@@ -6,8 +6,8 @@ const path = require("path");
 const https = require("https");
 const os = require("os");
 
-const SUPABASE_URL = process.env.NOVAPANEL_SUPABASE_URL || "https://yooqmcdouubgusezozas.supabase.co";
-const AGENT_TOKEN = process.env.NOVAPANEL_AGENT_TOKEN || "019d3f772221d8811c174e7c27d8ff4acd8d6d221b7c69d1317b9da72ba76956";
+const SUPABASE_URL = process.env.NOVAPANEL_SUPABASE_URL || "https://donfdgppygopgsvauunv.supabase.co";
+const AGENT_TOKEN = process.env.NOVAPANEL_AGENT_TOKEN || "8825dc7d021dae5215972dcf49dcbecd7e09821a8d40b79728c1ce718a7653d4";
 const SERVER_KIND = process.env.NOVAPANEL_KIND || "java";  // java | bedrock | eaglercraft
 const JAVA_BIN = process.env.NOVAPANEL_JAVA_BIN || "/usr/lib/jvm/msopenjdk-current/bin/java";
 const SERVER_DIR = path.resolve(__dirname, "server");
