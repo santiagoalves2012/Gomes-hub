@@ -1,0 +1,1 @@
+# NovaPanel legacy compatibility layer — managed by the panel.
