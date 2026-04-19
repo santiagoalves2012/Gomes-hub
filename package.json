@@ -1,0 +1,8 @@
+{
+  "name": "novapanel-server",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "unzipper": "^0.10.14"
+  }
+}
